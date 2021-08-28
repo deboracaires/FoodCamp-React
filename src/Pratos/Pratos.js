@@ -1,4 +1,4 @@
-import Comida from "./assets/comida.png";
+import Comida from "../assets/comida.png";
 import Prato from "./Prato";
 
 export default function Pratos(){

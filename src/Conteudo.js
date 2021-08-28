@@ -1,4 +1,5 @@
-import Pratos from "./Pratos";
+import Pratos from "./Pratos/Pratos";
+import Bebidas from "./Bebidas/Bebidas";
 
 export default function Conteudo(){
     return (
@@ -7,174 +8,14 @@ export default function Conteudo(){
         <h3 class="texto-prato righteous">
             Primeiro, seu prato
         </h3>
+        
         <Pratos />
         
         <h3 class="texto-bebida righteous">
             Agora, sua bebida 
         </h3>
-        <ul class="bebidas-conteiner">
-            <li class="bebida-conteiner">
-                <button class="bebida produto roboto" onclick="selecionarBebida(this); verificaBebida(this);">
-                <div class="imagem-produto">
-                    <img src="/assets/bebida.png"/>
-                </div>
-                <p class="titulo-produto">
-                    Coquinha gelada
-                </p>
-                <p class="descricao-produto">
-                    Lata 350ml
-                </p>
-                <p class="valor-produto">
-                    R$ 4,90
-                </p>
-                </button>
-            </li>
-            <li class="bebida-conteiner">
-                <button class="bebida produto roboto" onclick="selecionarBebida(this); verificaBebida(this);">
-                <div class="imagem-produto">
-                    <img src="/assets/bebida.png"/>
-                </div>
-                <p class="titulo-produto">
-                    Coquinha geladona
-                </p>
-                <p class="descricao-produto">
-                    Garrafa 2L
-                </p>
-                <p class="valor-produto">
-                    R$ 7,90
-                </p>
-                </button>
-            </li>
-            <li class="bebida-conteiner">
-                <button class="bebida produto roboto" onclick="selecionarBebida(this); verificaBebida(this);">
-                <div class="imagem-produto">
-                    <img src="/assets/bebida.png"/>
-                </div>
-                <p class="titulo-produto">
-                    Fanta Laranja
-                </p>
-                <p class="descricao-produto">
-                    Lata 300mL
-                </p>
-                <p class="valor-produto">
-                    R$ 2,90
-                </p>
-                </button>
-            </li>
-            <li class="bebida-conteiner">
-                <button class="bebida produto roboto" onclick="selecionarBebida(this); verificaBebida(this);">
-                <div class="imagem-produto">
-                    <img src="/assets/bebida.png"/>
-                </div>
-                <p class="titulo-produto">
-                    Coquinha gelada
-                </p>
-                <p class="descricao-produto">
-                    Lata 350ml
-                </p>
-                <p class="valor-produto">
-                    R$ 4,90
-                </p>
-                </button>
-            </li>
-            <li class="bebida-conteiner">
-                <button class="bebida produto roboto" onclick="selecionarBebida(this); verificaBebida(this);">
-                <div class="imagem-produto">
-                    <img src="/assets/bebida.png"/>
-                </div>
-                <p class="titulo-produto">
-                    Coquinha geladona
-                </p>
-                <p class="descricao-produto">
-                    Garrafa 2L
-                </p>
-                <p class="valor-produto">
-                    R$ 7,90
-                </p>
-                </button>
-            </li>
-            <li class="bebida-conteiner">
-                <button class="bebida produto roboto" onclick="selecionarBebida(this); verificaBebida(this);">
-                <div class="imagem-produto">
-                    <img src="/assets/bebida.png"/>
-                </div>
-                <p class="titulo-produto">
-                    Fanta Laranja
-                </p>
-                <p class="descricao-produto">
-                    Lata 300mL
-                </p>
-                <p class="valor-produto">
-                    R$ 2,90
-                </p>
-                </button>
-            </li>
-            <li class="bebida-conteiner">
-                <button class="bebida produto roboto" onclick="selecionarBebida(this); verificaBebida(this);">
-                <div class="imagem-produto">
-                    <img src="/assets/bebida.png"/>
-                </div>
-                <p class="titulo-produto">
-                    Coquinha gelada
-                </p>
-                <p class="descricao-produto">
-                    Lata 350ml
-                </p>
-                <p class="valor-produto">
-                    R$ 4,90
-                </p>
-                </button>
-            </li>
-            <li class="bebida-conteiner">
-                <button class="bebida produto roboto" onclick="selecionarBebida(this); verificaBebida(this);">
-                <div class="imagem-produto">
-                    <img src="/assets/bebida.png"/>
-                </div>
-                <p class="titulo-produto">
-                    Coquinha geladona
-                </p>
-                <p class="descricao-produto">
-                    Garrafa 2L
-                </p>
-                <p class="valor-produto">
-                    R$ 7,90
-                </p>
-                </button>
-            </li>
-            <li class="bebida-conteiner">
-                <button class="bebida produto roboto" onclick="selecionarBebida(this); verificaBebida(this);">
-                <div class="imagem-produto">
-                    <img src="/assets/bebida.png"/>
-                </div>
-                <p class="titulo-produto">
-                    Fanta Laranja
-                </p>
-                <p class="descricao-produto">
-                    Lata 300mL
-                </p>
-                <p class="valor-produto">
-                    R$ 2,90
-                </p>
-                </button>
-            </li>
-            <li class="bebida-conteiner">
-                <button class="bebida produto roboto" onclick="selecionarBebida(this); verificaBebida(this);">
-                <div class="imagem-produto">
-                    <img src="/assets/bebida.png"/>
-                </div>
-                <p class="titulo-produto">
-                    Coquinha gelada
-                </p>
-                <p class="descricao-produto">
-                    Lata 350ml
-                </p>
-                <p class="valor-produto">
-                    R$ 4,90
-                </p>
-                </button>
-            </li>
-            
-        </ul>
+        
+        <Bebidas />
 
          <h3 class="texto-sobremesa righteous">
             Por fim, sua sobremesa
