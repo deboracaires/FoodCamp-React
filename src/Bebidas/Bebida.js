@@ -1,7 +1,18 @@
+import React from "react";
+
 export default function Bebida(props){
+    
+    const [classesBebida, setClassesBebida] = React.useState(["bebida produto roboto"]);
+    
+    
+    function selecionarBebida(){
+        const selecionado = [...classesBebida, " selecionado"];
+        setClassesBebida(selecionado);
+        
+    }
     return (
         <li class="bebida-conteiner">
-                <button class="bebida produto roboto" onclick="selecionarBebida(this); verificaBebida(this);">
+                <button class={classesBebida} onClick={selecionarBebida}>
                 <div class="imagem-produto">
                     <img src={props.imgBebida}/>
                 </div>

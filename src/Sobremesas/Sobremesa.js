@@ -1,7 +1,18 @@
+import React from "react";
+
 export default function Sobremesa (props){
+    
+    const [classesSobremesa, setClassesSobremesa] = React.useState(["sobremesa produto roboto"]);
+    
+    
+    function selecionarSobremesa(){
+        const selecionado = [...classesSobremesa, " selecionado"];
+        setClassesSobremesa(selecionado);
+        
+    }
     return (
         <li class="sobremesa-conteiner">
-                <button class="sobremesa produto roboto" onclick="selecionarSobremesa(this); verificaSobremesa(this);">
+                <button class={classesSobremesa} onClick={selecionarSobremesa}>
                 <div class="imagem-produto">
                     <img src={props.imgSobremesa}/>
                 </div>
