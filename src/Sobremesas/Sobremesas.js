@@ -26,7 +26,7 @@ export default function Sobremesas (){
     return (
         <ul className="sobremesas-conteiner">
             
-            {sobremesas.map(sobremesa => <Sobremesa imgSobremesa = {sobremesa.imgSobremesa} titulo = {sobremesa.titulo} descricao = {sobremesa.descricao} valor = {sobremesa.valor}/>)}
+            {sobremesas.map((sobremesa, index) => <Sobremesa imgProduto = {sobremesa.imgSobremesa} titulo = {sobremesa.titulo} descricao = {sobremesa.descricao} valor = {sobremesa.valor} key = {index}/>)}
             
         </ul>
     );

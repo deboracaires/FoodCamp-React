@@ -1,38 +1,32 @@
 import React from "react";
+import TopoProduto from "../Produto/TopoProduto";
+import BottomProduto from "../Produto/BottomProduto";
 
 export default function Bebida(props){
     
     const [classesBebida, setClassesBebida] = React.useState(["bebida produto roboto"]);
     const [qtdProduto, setQtdProduto] = React.useState([]);
-    
+    const [qtd, setQtd] = React.useState(0);
     
     function selecionarBebida(){
         const selecionado = [...classesBebida, " selecionado"];
         setClassesBebida(selecionado);
-        const quantidade = [...qtdProduto, <p><strong className="diminuir-qtd">-       </strong> 1 <strong className="aumentar-qtd">        +</strong></p>];
+        const quantidade = [...qtdProduto,
+        <div className="qtd-produto">
+            <button className="diminuir-qtd">-</button> 
+            {qtd}
+            <button className="aumentar-qtd">+</button>
+        </div>    
+        ];
         setQtdProduto(quantidade); 
     }
     return (
         <li className="bebida-conteiner">
-                <button className={classesBebida} onClick={selecionarBebida}>
-                <div className="imagem-produto">
-                    <img src={props.imgBebida}/>
-                </div>
-                <p className="titulo-produto">
-                    {props.titulo}
-                </p>
-                <p className="descricao-produto">
-                    {props.descricao}
-                </p>
-                <div className = "bottom-produto">
-                    <p className="valor-produto">
-                        {props.valor}
-                    </p>
-                    {qtdProduto}
-                    
-                </div>
- 
-                </button>
+            <div className={classesBebida} onClick={selecionarBebida}>
+                <TopoProduto imgProduto = {props.imgProduto} titulo = {props.titulo} descricao = {props.descricao}/>
+                <BottomProduto valor = {props.valor} />
+                {qtdProduto}
+            </div>
         </li>
     );
 }

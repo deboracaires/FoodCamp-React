@@ -23,7 +23,7 @@ export default function Bebidas(){
     ];
     return (
         <ul className="bebidas-conteiner">
-            {bebidas.map((bebida, index) => <Bebida imgBebida = {bebida.imgBebida} titulo = {bebida.titulo} descricao = {bebida.descricao} valor = {bebida.valor} key = {index}/>)}
+            {bebidas.map((bebida, index) => <Bebida imgProduto = {bebida.imgBebida} titulo = {bebida.titulo} descricao = {bebida.descricao} valor = {bebida.valor} key = {index}/>)}
         </ul>
     );
 }
