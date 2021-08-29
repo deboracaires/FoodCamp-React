@@ -2,30 +2,35 @@ import React from "react";
 export default function Prato(props){
     
     const [classesPrato, setClassesPrato] = React.useState(["prato produto roboto"]);
-    
+    const [qtdProduto, setQtdProduto] = React.useState([]);
     
     function selecionarPrato(){
         const selecionado = [...classesPrato, " selecionado"];
         setClassesPrato(selecionado);
-        
+        const quantidade = [...qtdProduto, <p><strong className="diminuir-qtd">-       </strong> 1 <strong className="aumentar-qtd">        +</strong></p>];
+        setQtdProduto(quantidade); 
     }
 
     
     return (
-        <li class="prato-conteiner">
-            <button class={classesPrato} onClick={selecionarPrato}>
-                <div class="imagem-produto">
+        <li className="prato-conteiner">
+            <button className={classesPrato} onClick={selecionarPrato}>
+                <div className="imagem-produto">
                     <img src={props.imgPrato}/>
                 </div>
-                <p class="titulo-produto">
+                <p className="titulo-produto">
                     {props.titulo}
                 </p>
-                <p class="descricao-produto">
+                <p className="descricao-produto">
                     {props.descricao}
                 </p>
-                <p class="valor-produto">
-                    {props.valor}
-                </p>
+                <div className = "bottom-produto">
+                    <p className="valor-produto">
+                        {props.valor}
+                    </p>
+                    {qtdProduto}
+                    
+                </div>
             </button>
          </li>
     );

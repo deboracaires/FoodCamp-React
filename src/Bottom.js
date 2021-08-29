@@ -1,8 +1,8 @@
 export default function Bottom(){
     return(
-        <div class="bottom" >
+        <div className="bottom" >
         
-            <button class="selecionar-pedido roboto" onclick="finalizarPedido(this)">  
+            <button className="selecionar-pedido roboto">  
             Selecione os 3 itens para fechar o pedido
             </button>
        

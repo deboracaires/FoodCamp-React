@@ -124,6 +124,23 @@ h3{
     margin-bottom: 16px;
 }
 
+.bottom-produto{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.qtd-produto{
+    font-size:  16px;
+    line-height: 19px;
+}
+.diminuir-qtd{
+   color: #cf2b2b; 
+}
+
+.aumentar-qtd{
+    color: #32B72F;
+}
+
 
 .bottom{
     height: 92px;

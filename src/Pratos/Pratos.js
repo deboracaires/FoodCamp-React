@@ -22,7 +22,7 @@ export default function Pratos(){
 
     ];
     return (
-        <ul class="pratos-conteiner">
+        <ul className="pratos-conteiner">
            {pratos.map(prato => <Prato imgPrato = {prato.imgPrato} titulo = {prato.titulo} descricao = {prato.descricao} valor = {prato.valor} /> )}
         </ul>
     );

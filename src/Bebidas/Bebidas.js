@@ -22,8 +22,8 @@ export default function Bebidas(){
         descricao: "lata 350mL", valor: "R$ 4,90"}
     ];
     return (
-        <ul class="bebidas-conteiner">
-            {bebidas.map(bebida => <Bebida imgBebida = {bebida.imgBebida} titulo = {bebida.titulo} descricao = {bebida.descricao} valor = {bebida.valor}/>)}
+        <ul className="bebidas-conteiner">
+            {bebidas.map((bebida, index) => <Bebida imgBebida = {bebida.imgBebida} titulo = {bebida.titulo} descricao = {bebida.descricao} valor = {bebida.valor} key = {index}/>)}
         </ul>
     );
 }

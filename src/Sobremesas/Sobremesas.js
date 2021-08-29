@@ -24,7 +24,7 @@ export default function Sobremesas (){
         descricao: "Apenas bolo", valor: "R$8,90"}
     ];
     return (
-        <ul class="sobremesas-conteiner">
+        <ul className="sobremesas-conteiner">
             
             {sobremesas.map(sobremesa => <Sobremesa imgSobremesa = {sobremesa.imgSobremesa} titulo = {sobremesa.titulo} descricao = {sobremesa.descricao} valor = {sobremesa.valor}/>)}
             

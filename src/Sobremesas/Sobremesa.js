@@ -3,28 +3,34 @@ import React from "react";
 export default function Sobremesa (props){
     
     const [classesSobremesa, setClassesSobremesa] = React.useState(["sobremesa produto roboto"]);
-    
+    const [qtdProduto, setQtdProduto] = React.useState([]);
     
     function selecionarSobremesa(){
         const selecionado = [...classesSobremesa, " selecionado"];
         setClassesSobremesa(selecionado);
+        const quantidade = [...qtdProduto, <p><strong className="diminuir-qtd">-       </strong> 1 <strong className="aumentar-qtd">        +</strong></p>];
+        setQtdProduto(quantidade);
         
     }
     return (
-        <li class="sobremesa-conteiner">
-                <button class={classesSobremesa} onClick={selecionarSobremesa}>
-                <div class="imagem-produto">
+        <li className = "sobremesa-conteiner">
+                <button className = {classesSobremesa} onClick={selecionarSobremesa}>
+                <div className = "imagem-produto">
                     <img src={props.imgSobremesa}/>
                 </div>
-                <p class="titulo-produto">
+                <p className = "titulo-produto">
                     {props.titulo}
                 </p>
-                <p class="descricao-produto">
+                <p className = "descricao-produto">
                     {props.descricao}
                 </p>
-                <p class="valor-produto">
-                    {props.valor}
-                </p>
+                <div className = "bottom-produto">
+                    <p className="valor-produto">
+                        {props.valor}
+                    </p>
+                    {qtdProduto}
+                    
+                </div>
                 </button>
         </li>
     );

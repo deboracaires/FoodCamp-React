@@ -3,28 +3,35 @@ import React from "react";
 export default function Bebida(props){
     
     const [classesBebida, setClassesBebida] = React.useState(["bebida produto roboto"]);
+    const [qtdProduto, setQtdProduto] = React.useState([]);
     
     
     function selecionarBebida(){
         const selecionado = [...classesBebida, " selecionado"];
         setClassesBebida(selecionado);
-        
+        const quantidade = [...qtdProduto, <p><strong className="diminuir-qtd">-       </strong> 1 <strong className="aumentar-qtd">        +</strong></p>];
+        setQtdProduto(quantidade); 
     }
     return (
-        <li class="bebida-conteiner">
-                <button class={classesBebida} onClick={selecionarBebida}>
-                <div class="imagem-produto">
+        <li className="bebida-conteiner">
+                <button className={classesBebida} onClick={selecionarBebida}>
+                <div className="imagem-produto">
                     <img src={props.imgBebida}/>
                 </div>
-                <p class="titulo-produto">
+                <p className="titulo-produto">
                     {props.titulo}
                 </p>
-                <p class="descricao-produto">
+                <p className="descricao-produto">
                     {props.descricao}
                 </p>
-                <p class="valor-produto">
-                    {props.valor}
-                </p>
+                <div className = "bottom-produto">
+                    <p className="valor-produto">
+                        {props.valor}
+                    </p>
+                    {qtdProduto}
+                    
+                </div>
+ 
                 </button>
         </li>
     );
