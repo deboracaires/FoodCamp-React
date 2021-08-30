@@ -1,32 +1,30 @@
 import TopoProduto from "../Produto/TopoProduto";
 import BottomProduto from "../Produto/BottomProduto";
+import QtdProdutos from "../Produto/QtdProdutos";
+
 import React from "react";
 
 export default function Prato(props){
     
     const [classesPrato, setClassesPrato] = React.useState(["prato produto roboto"]);
-    const [qtdProduto, setQtdProduto] = React.useState([]);
-    const [qtd, setQtd] = React.useState(1);
-    
-    
-
+    const [alteraProps, setNovaProps] = React.useState(props);
+    const [textoQtd, setTextoQtd] = React.useState([]);
     
     function selecionarPrato(){
-        const selecionador = [...classesPrato, " selecionado"];
-        setClassesPrato(selecionador);
+        if(alteraProps.selecionado === false){
+            const selecionado = [...classesPrato, " selecionado"];
+            setClassesPrato(selecionado);
+            const novaProps = {...alteraProps, selecionado: true};
+            setNovaProps(novaProps);
+            setTextoQtd([<QtdProdutos />]);
+        }else{
+            
+
+        }
         
-        addQtd(); 
     }
 
-    function addQtd(){
-        const quantidade = [...qtdProduto, 
-            <div className="qtd-produto">
-                <button className="diminuir-qtd" onClick={()=> setQtd(qtd-1)}>-</button> 
-                {qtd}
-                <button className="aumentar-qtd" onClick={()=> setQtd(qtd-1)}>+</button>
-            </div>];
-        setQtdProduto(quantidade);
-    }
+    
     
 
     
@@ -35,7 +33,7 @@ export default function Prato(props){
             <div className={classesPrato} onClick={selecionarPrato}>
                 <TopoProduto imgProduto = {props.imgProduto} titulo = {props.titulo} descricao = {props.descricao}/>
                 <BottomProduto valor = {props.valor} />
-                {qtdProduto}
+                {textoQtd}
             </div>
          </li>
     );

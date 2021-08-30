@@ -4,21 +4,21 @@ import Prato from "./Prato";
 export default function Pratos(){
     const pratos = [
         {imgPrato: Comida, titulo: "Frango Yin Yang",  
-        descricao: "Um pouco de batata, um pouco de salada", valor: "R$ 14,90", selecionado: "false"}, 
+        descricao: "Um pouco de batata, um pouco de salada", valor: "R$ 14,90", selecionado: false}, 
         {imgPrato: Comida, titulo: "Ixtrofonofe",
-        descricao: "Um pouco de salada, um pouco de batata", valor: "R$ 10,90", selecionado: "false"}, 
+        descricao: "Um pouco de salada, um pouco de batata", valor: "R$ 10,90", selecionado: false}, 
         {imgPrato: Comida, titulo: "Batatão",
-        descricao: "Um pouco de batata, um pouco de salada", valor: "R$ 5,90", selecionado: "false"}, 
+        descricao: "Um pouco de batata, um pouco de salada", valor: "R$ 5,90", selecionado: false}, 
         {imgPrato: Comida, titulo: "Frango Yin Yang",
-        descricao: "Um pouco de batata, um pouco de salada", valor: "R$ 14,90", selecionado: "false"}, 
+        descricao: "Um pouco de batata, um pouco de salada", valor: "R$ 14,90", selecionado: false}, 
         {imgPrato: Comida, titulo: "Frango Yin Yang",
-        descricao: "Um pouco de batata, um pouco de salada", valor: "R$ 14,90", selecionado: "false"}, 
+        descricao: "Um pouco de batata, um pouco de salada", valor: "R$ 14,90", selecionado: false}, 
         {imgPrato: Comida, titulo: "Frango Yin Yang",
-        descricao: "Um pouco de batata, um pouco de salada", valor: "R$ 14,90", selecionado: "false"}, 
+        descricao: "Um pouco de batata, um pouco de salada", valor: "R$ 14,90", selecionado: false}, 
         {imgPrato: Comida, titulo: "Frango Yin Yang",
-        descricao: "Um pouco de batata, um pouco de salada", valor: "R$ 14,90", selecionado: "false"}, 
+        descricao: "Um pouco de batata, um pouco de salada", valor: "R$ 14,90", selecionado: false}, 
         {imgPrato: Comida, titulo: "Frango Yin Yang",
-        descricao: "Um pouco de batata, um pouco de salada", valor: "R$ 14,90", selecionado: "false"}
+        descricao: "Um pouco de batata, um pouco de salada", valor: "R$ 14,90", selecionado: false}
 
     ];
     //setInterval(()=> console.log(pratos), 4000);
