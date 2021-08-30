@@ -1,5 +1,5 @@
 import Comida from "../assets/comida.png";
-import Prato from "./Prato";
+import Produto from "../Produto/Produto";
 
 export default function Pratos(){
     const pratos = [
@@ -25,7 +25,7 @@ export default function Pratos(){
     
     return (
         <ul className="pratos-conteiner">
-           {pratos.map((prato, index) => <Prato key={index} imgProduto = {prato.imgPrato} titulo = {prato.titulo} descricao = {prato.descricao} selecionado = {prato.selecionado} valor = {prato.valor} /> )}
+           {pratos.map((prato, index) => <Produto key={index} imgProduto = {prato.imgPrato} titulo = {prato.titulo} descricao = {prato.descricao} selecionado = {prato.selecionado} valor = {prato.valor} /> )}
         </ul>
     );
 }

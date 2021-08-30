@@ -1,19 +1,19 @@
-import TopoProduto from "../Produto/TopoProduto";
-import BottomProduto from "../Produto/BottomProduto";
-import QtdProdutos from "../Produto/QtdProdutos";
+import TopoProduto from "./TopoProduto";
+import BottomProduto from "./BottomProduto";
+import QtdProdutos from "./QtdProdutos";
 
 import React from "react";
 
-export default function Prato(props){
+export default function Produto(props){
     
-    const [classesPrato, setClassesPrato] = React.useState(["prato produto roboto"]);
+    const [classesProduto, setClassesProduto] = React.useState(["produto roboto"]);
     const [alteraProps, setNovaProps] = React.useState(props);
     const [textoQtd, setTextoQtd] = React.useState([]);
     
-    function selecionarPrato(){
+    function selecionarProduto(){
         if(alteraProps.selecionado === false){
-            const selecionado = [...classesPrato, " selecionado"];
-            setClassesPrato(selecionado);
+            const selecionado = [...classesProduto, " selecionado"];
+            setClassesProduto(selecionado);
             const novaProps = {...alteraProps, selecionado: true};
             setNovaProps(novaProps);
             setTextoQtd([<QtdProdutos />]);
@@ -29,8 +29,8 @@ export default function Prato(props){
 
     
     return (
-        <li className="prato-conteiner">
-            <div className={classesPrato} onClick={selecionarPrato}>
+        <li>
+            <div className={classesProduto} onClick={selecionarProduto}>
                 <TopoProduto imgProduto = {props.imgProduto} titulo = {props.titulo} descricao = {props.descricao}/>
                 <BottomProduto valor = {props.valor} />
                 {textoQtd}

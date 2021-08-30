@@ -1,6 +1,6 @@
-import Pratos from "./Pratos/Pratos";
-import Bebidas from "./Bebidas/Bebidas";
-import Sobremesas from "./Sobremesas/Sobremesas";
+import Pratos from "./Todos Produtos/Pratos";
+import Bebidas from "./Todos Produtos/Bebidas";
+import Sobremesas from "./Todos Produtos/Sobremesas";
 
 export default function Conteudo(){
     return (
