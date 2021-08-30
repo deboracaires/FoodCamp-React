@@ -4,45 +4,37 @@ import QtdProdutos from "./QtdProdutos";
 
 import React from "react";
 
-let keySelecionado = -1;
+
 export default function Produto(props){
     
-    const [classesProduto, setClassesProduto] = React.useState(["produto roboto"]);
-    const [alteraProps, setNovaProps] = React.useState(props);
-    const [textoQtd, setTextoQtd] = React.useState([]);
+    const [qtd, setQtd] = React.useState(0);
     
+    const {
+        selecionarProduto, 
+        id, 
+        imgProduto, 
+        descricao,  
+        titulo,
+        valor
+    } = props;
     
-    
-
-    function selecionarProduto(){
-        
-        if(alteraProps.selecionado === false){
-            const selecionador = [...classesProduto, " selecionado"];
-            setClassesProduto(selecionador);
-            
-            alterarProps();   
-
-            setTextoQtd([<QtdProdutos />]);
-            keySelecionado = props.id;
-            console.log(keySelecionado);
-        }else{   
-            
-            
-        }
+    function diminuirQtd(){
+        setQtd(qtd-1);
+        console.log("qtd:"+qtd);
         
     }
-    function alterarProps(){
-        
-        const novaProps = {...alteraProps, selecionado: true};
-        setNovaProps(novaProps);
+    function aumentarQtd(){
+        setQtd(qtd + 1);
+        console.log("qtd:"+qtd);
     }
+    
 
     return (
         <li>
-            <div className={classesProduto} onClick={selecionarProduto}>
-                <TopoProduto imgProduto = {props.imgProduto} titulo = {props.titulo} descricao = {props.descricao}/>
-                <BottomProduto valor = {props.valor} />
-                {textoQtd}
+            <div className={props.children} onClick={()=> selecionarProduto(id)}>
+                <TopoProduto imgProduto = {imgProduto} titulo = {titulo} descricao = {descricao}/>
+                <BottomProduto valor = {valor} />
+                <QtdProdutos diminuirQtd = {diminuirQtd} aumentarQtd = {aumentarQtd}>{qtd}</QtdProdutos> 
             </div>
          </li>
     );
